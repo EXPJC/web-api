@@ -14,10 +14,11 @@ namespace WebApi.Test.Controllers
         [HttpGet("ping")]
         public IActionResult Ping(string echo)
         {
+            var back = " back";
             return Ok(
                         new PingResponse
                         {
-                            Echo = echo + " echo back",
+                            Echo = echo + " echo" + back,
                             CurrentTime = DateTime.Now
                         }
                      );
